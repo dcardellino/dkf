@@ -68,7 +68,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="de" className={`${inter.variable} ${barlow.variable}`}>
+    <html lang="de" data-scroll-behavior="smooth" className={`${inter.variable} ${barlow.variable}`}>
       <body>
         <a
           href="#main"
