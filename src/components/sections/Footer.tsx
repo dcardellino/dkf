@@ -18,7 +18,7 @@ const linkClass = 'text-ink-soft transition-colors hover:text-brand-700';
 
 export function Footer() {
   return (
-    <footer className="border-t border-line bg-white pb-28 sm:pb-10">
+    <footer className="border-t border-line bg-paper pb-28 sm:pb-10">
       <div className="container-page">
         <div className="flex flex-col gap-6 border-b border-line py-10 sm:flex-row sm:items-center sm:justify-between">
           <a href="#top" className="flex items-center gap-4" aria-label={`${company.name} – zum Seitenanfang`}>
@@ -34,7 +34,7 @@ export function Footer() {
             <InquiryButton />
             <a
               href={company.phoneHref}
-              className="inline-flex h-12 items-center justify-center gap-2 rounded-md border border-ink/15 px-6 font-semibold whitespace-nowrap hover:border-ink/40"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-md border border-ink/15 bg-white px-6 font-semibold whitespace-nowrap hover:border-ink/40"
             >
               <Phone aria-hidden className="size-4 text-brand-600" />
               {company.phoneDisplay}
@@ -133,7 +133,7 @@ export function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={label}
-                    className="inline-flex size-10 items-center justify-center rounded-full border border-line text-ink-soft transition-colors hover:border-brand-500 hover:bg-brand-50 hover:text-ink"
+                    className="inline-flex size-10 items-center justify-center rounded-full border border-line bg-white text-ink-soft transition-colors hover:border-brand-500 hover:bg-brand-50 hover:text-ink"
                   >
                     <Icon className="size-4" />
                   </a>
