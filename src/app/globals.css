@@ -1,0 +1,72 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-barlow), ui-sans-serif, system-ui, sans-serif;
+
+  /* DKF brand orange, derived from the logo */
+  --color-brand-50: #fff7eb;
+  --color-brand-100: #ffe9c7;
+  --color-brand-200: #ffd08a;
+  --color-brand-300: #ffb54d;
+  --color-brand-400: #fca326;
+  --color-brand-500: #f59300;
+  --color-brand-600: #c26d00;
+  --color-brand-700: #a35305;
+  --color-brand-800: #92490b;
+  --color-brand-900: #783d0c;
+
+  --color-ink: #16181b;
+  --color-ink-soft: #3b4047;
+  --color-muted: #646b74;
+  --color-line: #e3e5e8;
+  --color-paper: #f6f6f4;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+  }
+
+  ::selection {
+    @apply bg-brand-200 text-ink;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-600;
+  }
+}
+
+@utility container-page {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+@utility eyebrow {
+  @apply font-display text-sm font-semibold tracking-[0.14em] text-brand-700 uppercase;
+}
+
+@utility heading-xl {
+  @apply font-display text-4xl leading-[1.05] font-bold text-balance sm:text-5xl lg:text-6xl;
+}
+
+@utility heading-lg {
+  @apply font-display text-3xl leading-tight font-bold text-balance sm:text-4xl;
+}
