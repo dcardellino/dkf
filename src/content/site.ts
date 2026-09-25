@@ -32,8 +32,10 @@ export const company = {
   // TODO(content): mail domain differs from web domain – confirm or switch to an @dkf-bikes.com address.
   email: 'kontakt@dkf-weltweit.de',
   mapsHref: 'https://www.google.com/maps/search/?api=1&query=Gr%C3%BCnewaldstra%C3%9Fe+4%2F1%2C+71083+Herrenberg',
+  // Links as used on the legacy site dkf-bikes.com.
   social: {
-    facebook: 'https://www.facebook.com/p/DKF-Bikes-More-100064288620786/',
+    facebook: 'https://www.facebook.com/DKF-Bikes-More-147597131995011/',
+    instagram: 'https://www.instagram.com/dkf_bikes/',
   },
   serviceArea: [
     'Herrenberg',

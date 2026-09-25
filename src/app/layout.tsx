@@ -63,7 +63,7 @@ const jsonLd = {
       closes: '18:00',
     },
   ],
-  sameAs: [company.social.facebook],
+  sameAs: Object.values(company.social),
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
