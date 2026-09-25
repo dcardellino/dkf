@@ -20,6 +20,15 @@ export default function DatenschutzPage() {
         </p>
       </section>
       <section>
+        <h2>Anfrageformular</h2>
+        <p>
+          Wenn du uns über das Anfrageformular kontaktierst, verarbeiten wir die von dir angegebenen Daten (Name,
+          Kontaktdaten, Fahrzeug- und Anfrageangaben) ausschließlich zur Bearbeitung deiner Anfrage (Art. 6 Abs. 1 lit.
+          b DSGVO). In der aktuellen Testversion werden die Angaben nur lokal in deinem Browser gespeichert und nicht an
+          uns übertragen.
+        </p>
+      </section>
+      <section>
         <h2>Hinweis</h2>
         <p>
           Diese Website bindet keine externen Schriftarten, Karten oder Tracking-Dienste ein. Die vollständige

@@ -60,7 +60,7 @@ export function Specialties() {
             <p className="font-display text-xl font-bold sm:text-2xl">Du hast ein Projekt im Kopf?</p>
             <p className="mt-1 text-muted">Umbau, Restauration oder Motorschaden – erzähl uns, worum es geht.</p>
           </div>
-          <InquiryButton size="lg" label="Projekt anfragen" />
+          <InquiryButton size="lg" label="Projekt anfragen" concern="umbau" />
         </div>
       </div>
     </section>

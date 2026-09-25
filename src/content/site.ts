@@ -11,9 +11,8 @@ export type Photo = {
   height: number;
 };
 
-// Single switch for every "Anfrage" button on the page. The inquiry form is
-// built in the next step; until then all buttons point here.
-export const inquiryHref = '#';
+// Single switch for every "Anfrage" button on the page.
+export const inquiryHref = '/anfrage/';
 
 export const company = {
   name: 'DKF-Bikes',

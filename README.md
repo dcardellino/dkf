@@ -29,9 +29,23 @@ npm start            # out/ lokal ausliefern
 | `scripts/optimize-images.mjs`              | Wandelt die Originalfotos von dkf-bikes.com in WebP um                                                                           |
 | `public/images/`                           | Optimierte Bilder und Logo                                                                                                       |
 
-## Anfrage-Button
+## Anfrage-Funnel (`/anfrage/`)
 
-Alle Anfrage-Buttons (`data-cta="inquiry"`) lesen ihr Ziel aus `inquiryHref` in `src/content/site.ts`. Aktuell `'#'` – sobald das Anfrageformular steht, genügt es, diesen Wert anzupassen.
+Alle Anfrage-Buttons (`data-cta="inquiry"`) lesen ihr Ziel aus `inquiryHref` in `src/content/site.ts` und führen in den mehrstufigen Funnel: Fahrzeug → Anliegen → Details → Kontakt → Bestätigung. Mit `?anliegen=<concern>` (z. B. `umbau`) wird ein Anliegen vorausgewählt (`<InquiryButton concern="umbau" />`).
+
+**Speicherung (Prototyp):** Anfragen werden im **Local Storage des Besucher-Browsers** gespeichert (`src/lib/inquiries/store.ts`, Key `dkf.inquiries.v1`). Das heißt: Der Admin-Bereich zeigt nur Anfragen, die im selben Browser abgeschickt wurden – echte Kundenanfragen erreichen den Betrieb so **nicht**. Für den Livebetrieb ein Backend-Adapter (z. B. Supabase) implementieren, der das `InquiryStore`-Interface erfüllt, und ihn als `inquiryStore` exportieren.
+
+## Admin (`/admin/`)
+
+Liste, Filter, Suche, Detailansicht, Status (Neu / In Bearbeitung / Erledigt), Löschen und CSV-Export (Excel-kompatibel).
+
+Das Passwort wird als SHA-256-Hash über `NEXT_PUBLIC_ADMIN_PASSWORD_HASH` gesetzt (siehe `.env.example`), lokal in `.env.local`, auf Vercel als Environment Variable (Build neu auslösen):
+
+```bash
+node -e "console.log(require('crypto').createHash('sha256').update(process.argv[1]).digest('hex'))" 'dein-passwort'
+```
+
+> **Kein echter Zugriffsschutz:** Der Login wird nur im Browser geprüft, der Hash ist im ausgelieferten JavaScript enthalten. Das ist für den Local-Storage-Prototyp ausreichend (die Daten liegen ohnehin nur lokal), muss aber mit dem Backend durch serverseitige Authentifizierung (z. B. Supabase Auth) ersetzt werden.
 
 ## Offene Inhalte
 
