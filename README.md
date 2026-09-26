@@ -1,6 +1,6 @@
 # DKF-Bikes – Landingpage
 
-One-Pager für DKF-Bikes (Dietmar Klittich Fahrzeuge), KFZ-Meisterbetrieb für Motorrad und PKW in Herrenberg.
+One-Pager für DKF-Bikes (Dietmar Klittich Fahrzeuge), KFZ-Meisterbetrieb für Motorräder in Herrenberg.
 
 - **Stack:** Next.js (App Router, statischer Export), React, TypeScript, Tailwind CSS v4, lucide-react
 - **Marktanalyse & USP:** [`docs/marktanalyse.md`](docs/marktanalyse.md)
@@ -31,7 +31,7 @@ npm start            # out/ lokal ausliefern
 
 ## Anfrage-Funnel (`/anfrage/`)
 
-Alle Anfrage-Buttons (`data-cta="inquiry"`) lesen ihr Ziel aus `inquiryHref` in `src/content/site.ts` und führen in den mehrstufigen Funnel: Fahrzeug → Anliegen → Details → Kontakt → Bestätigung. Mit `?anliegen=<concern>` (z. B. `umbau`) wird ein Anliegen vorausgewählt (`<InquiryButton concern="umbau" />`).
+Alle Anfrage-Buttons (`data-cta="inquiry"`) lesen ihr Ziel aus `inquiryHref` in `src/content/site.ts` und führen in den mehrstufigen Funnel: Motorrad → Anliegen → Details → Kontakt → Bestätigung. Mit `?anliegen=<concern>` (z. B. `umbau`) wird ein Anliegen vorausgewählt (`<InquiryButton concern="umbau" />`).
 
 **Speicherung (Prototyp):** Anfragen werden im **Local Storage des Besucher-Browsers** gespeichert (`src/lib/inquiries/store.ts`, Key `dkf.inquiries.v1`). Das heißt: Der Admin-Bereich zeigt nur Anfragen, die im selben Browser abgeschickt wurden – echte Kundenanfragen erreichen den Betrieb so **nicht**. Für den Livebetrieb ein Backend-Adapter (z. B. Supabase) implementieren, der das `InquiryStore`-Interface erfüllt, und ihn als `inquiryStore` exportieren.
 

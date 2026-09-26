@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { Download, Info, LogOut, Mail, Phone, RefreshCw, Search, Trash2 } from 'lucide-react';
-import { channelLabels, concernLabels, statusLabels, vehicleTypeLabels } from '@/lib/inquiries/labels';
+import { channelLabels, concernLabels, statusLabels } from '@/lib/inquiries/labels';
 import { inquiryStore } from '@/lib/inquiries/store';
 import { inquiryStatuses, type Inquiry, type InquiryStatus } from '@/lib/inquiries/types';
 import { formatIsoDate } from '@/lib/inquiries/validation';
@@ -147,7 +147,7 @@ export function AdminDashboard({ onLogout }: { onLogout: () => void }) {
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Name, Kontakt, Fahrzeug …"
+            placeholder="Name, Kontakt, Motorrad …"
             className="h-11 w-full rounded-md border border-ink/15 bg-white pr-4 pl-9 focus:border-brand-600 focus:ring-2 focus:ring-brand-500/30 focus:outline-none"
           />
         </label>
@@ -250,9 +250,9 @@ export function AdminDashboard({ onLogout }: { onLogout: () => void }) {
               <dl className="mt-6 grid gap-x-6 gap-y-3 border-t border-line pt-6 text-sm sm:grid-cols-[9rem_1fr]">
                 <dt className="text-muted">Bevorzugt</dt>
                 <dd>{channelLabels[selected.contact.preferredChannel]}</dd>
-                <dt className="text-muted">Fahrzeug</dt>
+                <dt className="text-muted">Motorrad</dt>
                 <dd>
-                  {vehicleTypeLabels[selected.vehicle.type]} · {selected.vehicle.brand} {selected.vehicle.model}
+                  {selected.vehicle.brand} {selected.vehicle.model}
                   {selected.vehicle.year && ` (${selected.vehicle.year})`}
                 </dd>
                 <dt className="text-muted">Anliegen</dt>

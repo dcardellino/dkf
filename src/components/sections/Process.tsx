@@ -10,7 +10,7 @@ export function Process() {
           id="ablauf-title"
           eyebrow="So läuft's ab"
           title="In vier Schritten zum Termin."
-          text="Unkompliziert und persönlich – du weißt jederzeit, was an deinem Fahrzeug passiert."
+          text="Unkompliziert und persönlich – du weißt jederzeit, was an deinem Motorrad passiert."
         />
 
         <ol className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">

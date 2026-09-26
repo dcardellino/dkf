@@ -1,4 +1,4 @@
-import { channelLabels, concernLabels, statusLabels, vehicleTypeLabels } from '@/lib/inquiries/labels';
+import { channelLabels, concernLabels, statusLabels } from '@/lib/inquiries/labels';
 import type { Inquiry } from '@/lib/inquiries/types';
 
 // Quotes a cell and neutralises leading formula characters (CSV injection),
@@ -17,7 +17,6 @@ export function inquiriesToCsv(inquiries: Inquiry[]) {
     'Telefon',
     'E-Mail',
     'Kontaktweg',
-    'Fahrzeugart',
     'Marke',
     'Modell',
     'Baujahr',
@@ -32,7 +31,6 @@ export function inquiriesToCsv(inquiries: Inquiry[]) {
     i.contact.phone,
     i.contact.email,
     channelLabels[i.contact.preferredChannel],
-    vehicleTypeLabels[i.vehicle.type],
     i.vehicle.brand,
     i.vehicle.model,
     i.vehicle.year,

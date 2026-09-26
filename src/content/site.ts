@@ -60,7 +60,7 @@ export const openingHours = [
 ];
 
 export const openingHoursNote =
-  'Am besten vorher einen Termin ausmachen – dann haben wir Zeit für dich und dein Fahrzeug.';
+  'Am besten vorher einen Termin ausmachen – dann haben wir Zeit für dich und dein Motorrad.';
 
 export const navigation = [
   { label: 'Leistungen', href: '#leistungen' },
@@ -99,7 +99,7 @@ export const photos = {
 export const hero = {
   eyebrow: `KFZ-Meisterbetrieb · seit ${company.foundedYear} in Herrenberg`,
   title: 'Deine freie Harley- & Meisterwerkstatt im Gäu.',
-  text: 'Service, Reparatur und Umbau für Motorrad und PKW – vom Kundendienst bis zur kompletten Motorinstandsetzung. Persönlich, ehrlich und mit über 30 Jahren Erfahrung.',
+  text: 'Service, Reparatur und Umbau für dein Motorrad – vom Kundendienst bis zur kompletten Motorinstandsetzung. Persönlich, ehrlich und mit über 30 Jahren Erfahrung.',
   bullets: ['Alle Marken & Fabrikate', 'Harley-Davidson ohne Händlerbindung', 'Transparente Ab-Preise'],
 };
 
@@ -107,7 +107,7 @@ export const trustItems = [
   { value: `${yearsInBusiness}+`, label: 'Jahre Erfahrung', detail: `seit ${company.foundedYear} in Herrenberg` },
   { value: 'Meister', label: 'KFZ-Meisterbetrieb', detail: company.chamber },
   { value: 'H-D', label: 'Harley-Spezialist', detail: 'Service, Umbau, Klassiker' },
-  { value: '2 in 1', label: 'Motorrad & PKW', detail: 'alle Marken, Originalteile' },
+  { value: 'Alle', label: 'Marken & Baujahre', detail: 'vom Klassiker bis heute, Originalteile' },
 ];
 
 export type Service = {
@@ -119,18 +119,18 @@ export type Service = {
 export const services: Service[] = [
   {
     icon: 'wrench',
-    title: 'Kundendienst Motorrad & PKW',
-    text: 'Inspektion nach Herstellervorgabe für Fahrzeuge aller Art und Fabrikate – mit Originalteilen, zum fairen Preis.',
+    title: 'Kundendienst',
+    text: 'Inspektion nach Herstellervorgabe für Motorräder aller Marken und Baujahre – mit Originalteilen, zum fairen Preis.',
   },
   {
     icon: 'clipboard',
     title: 'HU & AU',
-    text: 'Hauptuntersuchung und Abgasuntersuchung – wir bereiten dein Fahrzeug vor, damit es ohne Mängel durchkommt.',
+    text: 'Hauptuntersuchung und Abgasuntersuchung – wir bereiten dein Motorrad vor, damit es ohne Mängel durchkommt.',
   },
   {
     icon: 'tire',
     title: 'Reifenservice',
-    text: 'Sommer- und Winterreifen für Motorrad und PKW, Montage, Auswuchten – auch mit mitgebrachten Reifen.',
+    text: 'Neue Reifen für dein Motorrad, Montage, Auswuchten – auch mit mitgebrachten Reifen.',
   },
   {
     icon: 'engine',
@@ -203,27 +203,27 @@ export const gallery: Photo[] = [
 // TODO(content): prices taken from the legacy site – confirm they are current.
 export const prices = [
   { title: 'Reifenwechsel', price: 'ab 30 €', note: 'pro Rad, bei mitgebrachten Reifen' },
-  { title: 'HU & AU', price: 'ab 130 €', note: 'Motorrad oder PKW' },
-  { title: 'Kleiner Kundendienst', price: 'ab 150 €', note: 'Motorrad oder PKW' },
+  { title: 'HU & AU', price: 'ab 130 €', note: 'alle Marken' },
+  { title: 'Kleiner Kundendienst', price: 'ab 150 €', note: 'alle Marken' },
   { title: 'Großer Kundendienst', price: 'ab 550 €', note: 'nach Herstellervorgabe' },
 ];
 
 // TODO(content): confirm VAT statement.
 export const pricesNote =
-  'Alle Preise inkl. MwSt. Der Endpreis hängt vom Fahrzeug und vom Befund ab – du bekommst vorher eine ehrliche Einschätzung. Custom-Umbauten und Restaurationen kalkulieren wir individuell.';
+  'Alle Preise inkl. MwSt. Der Endpreis hängt vom Motorrad und vom Befund ab – du bekommst vorher eine ehrliche Einschätzung. Custom-Umbauten und Restaurationen kalkulieren wir individuell.';
 
 export const processSteps = [
-  { title: 'Anfrage', text: 'Schreib uns kurz, um welches Fahrzeug es geht und was ansteht – gern mit Foto.' },
+  { title: 'Anfrage', text: 'Schreib uns kurz, um welches Motorrad es geht und was ansteht – gern mit Foto.' },
   { title: 'Einschätzung', text: 'Wir melden uns persönlich mit einer ehrlichen Einschätzung und einem Kostenrahmen.' },
-  { title: 'Termin', text: 'Du bringst dein Fahrzeug vorbei. Größere Arbeiten sprechen wir vorher mit dir ab.' },
-  { title: 'Abholung', text: 'Du holst dein Fahrzeug ab und bekommst erklärt, was wir gemacht haben.' },
+  { title: 'Termin', text: 'Du bringst dein Motorrad vorbei. Größere Arbeiten sprechen wir vorher mit dir ab.' },
+  { title: 'Abholung', text: 'Du holst dein Motorrad ab und bekommst erklärt, was wir gemacht haben.' },
 ];
 
 export const about = {
   title: 'Inhabergeführt. Persönlich. Seit 1994.',
   paragraphs: [
-    'Hinter DKF-Bikes stehen Dietmar und Conny Klittich. Seit über 30 Jahren sind wir in Herrenberg der Ansprechpartner für alle, die ihr Fahrzeug in gute Hände geben wollen – vom Alltagsauto bis zur Harley mit Geschichte.',
-    'Bei uns sprichst du direkt mit dem Meister, der auch an deinem Fahrzeug schraubt. Kein Callcenter, keine Standardantworten – sondern ehrliche Beratung und Arbeit, hinter der wir stehen.',
+    'Hinter DKF-Bikes stehen Dietmar und Conny Klittich. Seit über 30 Jahren sind wir in Herrenberg der Ansprechpartner für alle, die ihr Motorrad in gute Hände geben wollen – vom Alltagsbike bis zur Harley mit Geschichte.',
+    'Bei uns sprichst du direkt mit dem Meister, der auch an deinem Motorrad schraubt. Kein Callcenter, keine Standardantworten – sondern ehrliche Beratung und Arbeit, hinter der wir stehen.',
   ],
   // TODO(content): add a real team photo of Dietmar & Conny.
   team: [
@@ -233,7 +233,7 @@ export const about = {
   values: [
     { title: 'Fairness', text: 'Transparente Preise und keine Arbeiten ohne deine Freigabe.' },
     { title: 'Originalteile', text: 'Qualität, die hält – beim Kundendienst wie beim Umbau.' },
-    { title: 'Erfahrung', text: 'Über drei Jahrzehnte Praxis mit Motorrad und PKW.' },
+    { title: 'Erfahrung', text: 'Über drei Jahrzehnte Praxis mit Motorrädern aller Art.' },
   ],
 };
 
@@ -244,8 +244,8 @@ export const faqs = [
     a: 'Ja. Als freie Werkstatt betreuen wir Harley-Davidson aller Baujahre – egal wo das Motorrad gekauft wurde. Auch ältere Modelle und Umbauten.',
   },
   {
-    q: 'Repariert ihr nur Motorräder?',
-    a: 'Nein. Wir sind KFZ-Meisterbetrieb für Motorrad und PKW und übernehmen Kundendienst, Reparaturen, Reifenservice sowie HU/AU für Fahrzeuge aller Marken.',
+    q: 'Arbeitet ihr nur an Harleys?',
+    a: 'Nein. Harley-Davidson und Klassiker sind unsere Spezialität, aber wir übernehmen Kundendienst, Reparaturen, Reifenservice sowie HU/AU für Motorräder aller Marken.',
   },
   {
     q: 'Sind eure Custom-Umbauten TÜV-konform?',
@@ -253,7 +253,7 @@ export const faqs = [
   },
   {
     q: 'Lohnt sich eine Motorinstandsetzung statt eines Austauschmotors?',
-    a: 'Oft ja – vor allem bei Klassikern und Harleys. Nach dem Befund sagen wir dir ehrlich, welche Variante für dein Fahrzeug wirtschaftlich sinnvoll ist.',
+    a: 'Oft ja – vor allem bei Klassikern und Harleys. Nach dem Befund sagen wir dir ehrlich, welche Variante für dein Motorrad wirtschaftlich sinnvoll ist.',
   },
   {
     q: 'Bekomme ich vorher einen Kostenvoranschlag?',
@@ -265,6 +265,6 @@ export const faqs = [
   },
   {
     q: 'Brauche ich einen Termin?',
-    a: 'Ja, bitte. So haben wir Zeit für dich und dein Fahrzeug. Stell einfach eine Anfrage oder ruf uns an.',
+    a: 'Ja, bitte. So haben wir Zeit für dich und dein Motorrad. Stell einfach eine Anfrage oder ruf uns an.',
   },
 ];

@@ -11,7 +11,7 @@ const barlow = Barlow_Condensed({
   display: 'swap',
 });
 
-const title = 'DKF-Bikes Herrenberg – Freie Harley- & KFZ-Meisterwerkstatt für Motorrad und PKW';
+const title = 'DKF-Bikes Herrenberg – Freie Harley- & Motorrad-Meisterwerkstatt';
 const description =
   'KFZ-Meisterbetrieb in Herrenberg seit 1994: Kundendienst, HU/AU, Reifen, Motor- und Getriebeinstandsetzung, Harley-Davidson Custom Bikes und Restauration klassischer Motorräder.';
 
@@ -37,7 +37,7 @@ export const viewport: Viewport = {
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': ['MotorcycleRepair', 'AutoRepair'],
+  '@type': 'MotorcycleRepair',
   name: company.brand,
   legalName: company.legalName,
   url: 'https://dkf-bikes.com',

@@ -1,6 +1,3 @@
-export const vehicleTypes = ['motorrad', 'pkw'] as const;
-export type VehicleType = (typeof vehicleTypes)[number];
-
 export const concerns = [
   'service',
   'hu_au',
@@ -20,7 +17,6 @@ export type ContactChannel = 'telefon' | 'email';
 
 export type InquiryDraft = {
   vehicle: {
-    type: VehicleType | '';
     brand: string;
     model: string;
     year: string;
@@ -37,16 +33,15 @@ export type InquiryDraft = {
   consent: boolean;
 };
 
-export type Inquiry = Omit<InquiryDraft, 'vehicle' | 'concern'> & {
+export type Inquiry = Omit<InquiryDraft, 'concern'> & {
   id: string;
   createdAt: string;
   status: InquiryStatus;
-  vehicle: InquiryDraft['vehicle'] & { type: VehicleType };
   concern: Concern;
 };
 
 export const emptyDraft = (): InquiryDraft => ({
-  vehicle: { type: '', brand: '', model: '', year: '' },
+  vehicle: { brand: '', model: '', year: '' },
   concern: '',
   message: '',
   preferredDate: '',

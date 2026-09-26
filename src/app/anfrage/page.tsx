@@ -5,7 +5,7 @@ import { MinimalHeader } from '@/components/MinimalHeader';
 export const metadata: Metadata = {
   title: 'Anfrage stellen – DKF-Bikes Herrenberg',
   description:
-    'Unverbindliche Anfrage für Service, Reparatur, Umbau oder Restauration an Motorrad und PKW – DKF-Bikes, KFZ-Meisterbetrieb in Herrenberg.',
+    'Unverbindliche Anfrage für Service, Reparatur, Umbau oder Restauration deines Motorrads – DKF-Bikes, KFZ-Meisterbetrieb in Herrenberg.',
   alternates: { canonical: '/anfrage/' },
 };
 

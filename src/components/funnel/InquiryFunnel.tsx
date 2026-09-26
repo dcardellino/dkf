@@ -5,8 +5,6 @@ import { useEffect, useRef, useState, type FormEvent } from 'react';
 import {
   ArrowLeft,
   ArrowRight,
-  Bike,
-  Car,
   CheckCircle2,
   CircleDot,
   ClipboardCheck,
@@ -20,13 +18,13 @@ import {
 } from 'lucide-react';
 import { company } from '@/content/site';
 import { ChoiceCard, Field, TextArea, TextInput, describedBy } from '@/components/form';
-import { channelLabels, concernLabels, vehicleTypeLabels } from '@/lib/inquiries/labels';
+import { channelLabels, concernLabels } from '@/lib/inquiries/labels';
 import { inquiryStore } from '@/lib/inquiries/store';
 import { concerns, emptyDraft, isConcern, type Concern, type InquiryDraft } from '@/lib/inquiries/types';
 import { formatIsoDate, tomorrowIso, validateStep, type FieldErrors } from '@/lib/inquiries/validation';
 
 const steps = [
-  { title: 'Um welches Fahrzeug geht es?', short: 'Fahrzeug' },
+  { title: 'Um welches Motorrad geht es?', short: 'Motorrad' },
   { title: 'Was dürfen wir für dich tun?', short: 'Anliegen' },
   { title: 'Erzähl uns mehr.', short: 'Details' },
   { title: 'Wie erreichen wir dich?', short: 'Kontakt' },
@@ -56,7 +54,7 @@ const concernDescriptions: Record<Concern, string> = {
 
 const messagePlaceholders: Partial<Record<Concern, string>> = {
   umbau: 'Was schwebt dir vor? Stil, Vorbilder, Budgetrahmen …',
-  restauration: 'Zustand des Fahrzeugs, was ist original, was fehlt …',
+  restauration: 'Zustand des Motorrads, was ist original, was fehlt …',
   reparatur: 'Was genau passiert? Seit wann? Geräusche, Warnleuchten …',
   motor_getriebe: 'Was ist passiert? Laufleistung, Symptome …',
 };
@@ -194,41 +192,12 @@ export function InquiryFunnel() {
       <div className="mt-8 grid gap-6">
         {step === 0 && (
           <>
-            <fieldset>
-              <legend className="sr-only">Fahrzeugart</legend>
-              <div className="grid gap-3 sm:grid-cols-2" id="vehicle-type" tabIndex={-1}>
-                <ChoiceCard
-                  name="vehicleType"
-                  value="motorrad"
-                  checked={draft.vehicle.type === 'motorrad'}
-                  onChange={() =>
-                    update((d) => ({ ...d, vehicle: { ...d.vehicle, type: 'motorrad' } }), 'vehicle.type')
-                  }
-                  title="Motorrad"
-                  description="Harley, Klassiker, alle Marken"
-                  icon={<Bike aria-hidden className="size-5" />}
-                />
-                <ChoiceCard
-                  name="vehicleType"
-                  value="pkw"
-                  checked={draft.vehicle.type === 'pkw'}
-                  onChange={() => update((d) => ({ ...d, vehicle: { ...d.vehicle, type: 'pkw' } }), 'vehicle.type')}
-                  title="PKW"
-                  description="Alle Marken & Fabrikate"
-                  icon={<Car aria-hidden className="size-5" />}
-                />
-              </div>
-              {errors['vehicle.type'] && (
-                <p className="mt-2 text-sm font-medium text-red-700">{errors['vehicle.type']}</p>
-              )}
-            </fieldset>
-
             <div className="grid gap-6 sm:grid-cols-2">
               <Field id="vehicle-brand" label="Marke" error={errors['vehicle.brand']}>
                 <TextInput
                   id="vehicle-brand"
                   autoComplete="off"
-                  placeholder={draft.vehicle.type === 'pkw' ? 'z. B. VW' : 'z. B. Harley-Davidson'}
+                  placeholder="z. B. Harley-Davidson"
                   value={draft.vehicle.brand}
                   invalid={!!errors['vehicle.brand']}
                   aria-describedby={describedBy('vehicle-brand', errors['vehicle.brand'])}
@@ -241,7 +210,7 @@ export function InquiryFunnel() {
                 <TextInput
                   id="vehicle-model"
                   autoComplete="off"
-                  placeholder={draft.vehicle.type === 'pkw' ? 'z. B. Golf VII' : 'z. B. Sportster 1200'}
+                  placeholder="z. B. Sportster 1200"
                   value={draft.vehicle.model}
                   onChange={(e) => update((d) => ({ ...d, vehicle: { ...d.vehicle, model: e.target.value } }))}
                 />
@@ -413,10 +382,9 @@ export function InquiryFunnel() {
             <div className="rounded-xl border border-line bg-paper p-5 text-sm">
               <p className="font-semibold">Deine Anfrage</p>
               <dl className="mt-3 grid gap-2 sm:grid-cols-[8rem_1fr]">
-                <dt className="text-muted">Fahrzeug</dt>
+                <dt className="text-muted">Motorrad</dt>
                 <dd>
-                  {draft.vehicle.type && vehicleTypeLabels[draft.vehicle.type]} · {draft.vehicle.brand}{' '}
-                  {draft.vehicle.model}
+                  {draft.vehicle.brand} {draft.vehicle.model}
                   {draft.vehicle.year && ` (${draft.vehicle.year})`}
                 </dd>
                 <dt className="text-muted">Anliegen</dt>

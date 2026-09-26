@@ -18,7 +18,6 @@ export function validateStep(step: number, draft: InquiryDraft): FieldErrors {
   const currentYear = new Date().getFullYear();
 
   if (step === 0) {
-    if (!draft.vehicle.type) errors['vehicle.type'] = 'Bitte wähle Motorrad oder PKW.';
     if (!draft.vehicle.brand.trim()) errors['vehicle.brand'] = 'Bitte gib die Marke an.';
     if (draft.vehicle.year) {
       const year = Number(draft.vehicle.year);

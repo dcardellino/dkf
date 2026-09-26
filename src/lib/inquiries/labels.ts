@@ -1,9 +1,4 @@
-import type { Concern, ContactChannel, InquiryStatus, VehicleType } from './types';
-
-export const vehicleTypeLabels: Record<VehicleType, string> = {
-  motorrad: 'Motorrad',
-  pkw: 'PKW',
-};
+import type { Concern, ContactChannel, InquiryStatus } from './types';
 
 export const concernLabels: Record<Concern, string> = {
   service: 'Kundendienst / Inspektion',

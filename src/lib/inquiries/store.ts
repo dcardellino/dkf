@@ -41,10 +41,9 @@ export const localStorageStore: InquiryStore = {
     return read().sort((a, b) => b.createdAt.localeCompare(a.createdAt));
   },
   async create(draft) {
-    if (!draft.vehicle.type || !draft.concern) throw new Error('Unvollständige Anfrage.');
+    if (!draft.concern) throw new Error('Unvollständige Anfrage.');
     const inquiry: Inquiry = {
       ...draft,
-      vehicle: { ...draft.vehicle, type: draft.vehicle.type },
       concern: draft.concern,
       id: newId(),
       createdAt: new Date().toISOString(),

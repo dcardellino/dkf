@@ -20,8 +20,8 @@ export function Services() {
         <SectionHeading
           id="leistungen-title"
           eyebrow="Leistungen"
-          title="Alles für Motorrad und PKW – aus einer Hand."
-          text="Vom regelmäßigen Kundendienst bis zur Motorrevision: Als Meisterbetrieb kümmern wir uns um Fahrzeuge aller Marken und Fabrikate."
+          title="Alles rund ums Motorrad – aus einer Hand."
+          text="Vom regelmäßigen Kundendienst bis zur Motorrevision: Als Meisterbetrieb kümmern wir uns um Motorräder aller Marken und Baujahre."
         />
 
         <ul className="mt-14 grid gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
